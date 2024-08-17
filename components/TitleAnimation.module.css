@@ -1,0 +1,33 @@
+/* components/TitleAnimation.module.css */
+.titleContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .letter {
+    position: absolute;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    opacity: 0; 
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out; 
+  }
+  
+
+  @keyframes gather {
+    to {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+  
+  .gathered .letter {
+    transform: translate(0, 0); 
+    opacity: 1; 
+  }
+  

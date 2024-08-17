@@ -1,0 +1,48 @@
+/* Card */
+
+.flipped {
+    background-color: rgb(235, 105, 181);
+    border-radius: 25px;
+    display: grid;
+    align-items: center;
+}
+
+.card {
+    width: 160px;
+    margin: 0 auto;
+    transition: all 0.3s ease-in;
+    perspective: 200px;
+    user-select: none;
+}
+
+.card img {
+    display: block;
+    max-width: 100%;
+    border-radius: 25px;
+    scale: 1;
+}
+
+.card:hover {
+    scale: 1.1;
+}
+
+/*  Front Card  */
+.card .frontCard {
+    position: absolute;
+    transform: rotateY(90deg);
+    transition: transform ease-in .25s;
+}
+
+.flipped .frontCard {
+    transform: rotateY(180deg);
+    transition-delay: 0.2s;
+}
+
+/* Back Card */
+.card .backCard {
+    transition: transform ease-in .25s;
+}
+
+.flipped .backCard {
+    transform: rotateY(90deg);
+}
